@@ -8,9 +8,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -73,6 +73,20 @@ fun HomeView(name: String, navController: NavHostController) {
                 color = Color.Red,
                 navController = navController,
                 icon = Icons.Filled.List
+            )
+            ShowcaseButton(
+                "CuboidCalculator",
+                "Calculates volumes and other complex thingies",
+                color = Color.Blue,
+                navController = navController,
+                icon = Icons.Filled.Build
+            )
+            ShowcaseButton(
+                name = "DegreeCalculator",
+                description = "Converts Degrees",
+                color = Color.Magenta,
+                navController = navController,
+                icon = Icons.Filled.Refresh
             )
 
         }

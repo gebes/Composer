@@ -12,10 +12,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import io.gebes.composer.ui.theme.ComposerTheme
 import io.gebes.composer.views.HomeView
-import io.gebes.composer.views.showcases.BottomAppBarShowcase
-import io.gebes.composer.views.showcases.InfiniteListShowCase
-import io.gebes.composer.views.showcases.MaterialButtonsShowcase
-import io.gebes.composer.views.showcases.TopAppBarShowcase
+import io.gebes.composer.views.showcases.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +46,16 @@ class MainActivity : ComponentActivity() {
                         InfiniteListShowCase(navController)
                     }
                 }
+                composable(route = "showcases/CuboidCalculator"){
+                    ComposerTheme {
+                        CuboidCalculatorShowcase(navController)
+                    }
+                }
+                composable(route = "showcases/DegreeCalculator"){
+                    ComposerTheme {
+                        DegreeCalculatorShowcase(navController)
+                    }
+                }
             }
 
 
@@ -64,3 +71,4 @@ fun App(navController: NavHostController) {
         HomeView(name = android.os.Build.MODEL, navController)
     }
 }
+
